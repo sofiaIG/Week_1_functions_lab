@@ -40,8 +40,38 @@ def task_description_is(text):
         if task["description"] == text:      
             print(task)
 
-to_do_list() 
-done_list()
-all_tasks()
-task_duration(20)
-task_description_is("Wash Dishes")
+def task_completed(text):
+    for task in tasks:
+        if task["description"] == text and task["completed"] == False:
+            task["completed"] = True
+        return tasks
+
+tasks.append(
+    {
+        "description": "Do Homework",
+        "completed": False,
+        "time_taken": 120 
+}
+)
+
+
+# to_do_list() 
+# done_list()
+# all_tasks()
+# task_duration(20)
+# task_description_is("Wash Dishes")
+
+
+
+# print("Menu:")
+# print("1: Display All Tasks")
+# print("2: Display Uncompleted Tasks")
+# print("3: Display Completed Tasks")
+# print("4: Mark Task as Complete")
+# print("5: Get Tasks Which Take Longer Than a Given Time")
+# print("6: Find Task by Description")
+# print("7: Add a new Task to list")
+# print("M or m: Display this menu")
+# print("Q or q: Quit")
+
+# user_input = input("What do you want to do?" )
